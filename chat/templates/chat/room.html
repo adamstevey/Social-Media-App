@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="etf-8">
+        <title>ChatApp</title>
+    </head>
+    <body>
+        <section class='section'>
+            <div class="container">
+                <div class="box">
+                    <div id="chat-messages"></div>
+                </div>
+                <input type="text" id="chat-message-input" placeholder="Message">
+                <input type="submit" id="chat-message-submit", placeholder="Send">
+            </div>
+        </section>
+
+        <script>
+            document.querySelector('#room-name-input').focus();
+            document.querySelector('#room-name-submit').onclick = function(e) {
+                var roomName = document.querySelector("#room-name-input").value;
+                var username = document.querySelector("#username-input").value;
+
+                window.location.replace(roomName + '/?username=' + username);
+            };
+        </script>
+
+    </body>
+</html>
